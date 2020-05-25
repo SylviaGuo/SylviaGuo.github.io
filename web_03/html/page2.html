@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Page 2</title>
+<script text="style/javascript">
+
+function showStyle(){
+	var myStyle=document.getElementById("myStyle");
+	var index=myStyle.selectedIndex;
+	var myForm=document.getElementById("myform");
+	switch(myStyle.options[index].value){//judge the style of the form
+				case "pink":
+					myForm.style.backgroundColor="pink";
+					myForm.style.color="#f93859";
+					break;
+				case "green":
+					myForm.style.backgroundColor="#9cfa83";
+					myForm.style.color="#3ea024";
+					break;
+				case "gray":
+					myForm.style.backgroundColor="#c4c5c3";
+					myForm.style.color="#6a6b69";
+					break;
+			}
+}
+function showForm(){
+displaytext="";
+var mycheck = document.getElementsByName("mycheck");
+	for( var i = 0; i < mycheck.length; i++ )
+	{
+		if ( mycheck[i].checked ){
+			switch(mycheck[i].value){//write what user choose
+				case "Name":
+					displaytext+="<tr><td><label name=\"left\" for=\"myName\">Name: ";
+					displaytext+="</label></td><td> <input name=\"right\" id=\"myName\" type=\"text\" ></td></tr>";
+					break;
+				case "Age":
+					displaytext+="<tr><td><label name=\"left\" for=\"myAge\">Age: ";
+					displaytext+="</label> </td><td><input name=\"right\" id=\"myAge\" type=\"text\" ></td></tr>";
+					break;
+				case "Country":
+					displaytext+="<tr><td><label name=\"left\" or=\"myCountry\">Country: ";
+					displaytext+="</label> </td><td><input name=\"right\" id=\"myCountry\" type=\"text\" ></td></tr>";
+					break;
+				case "Hobby":
+					displaytext+="<tr><td><label name=\"left\" for=\"myHobby\">Hobby: ";
+					displaytext+="</label> </td><td><input name=\"right\" id=\"myHobby\" type=\"text\" ></td></tr>";
+					break;
+			}
+		}
+	}
+	document.getElementById('myform').innerHTML=displaytext;
+	showStyle();
+}
+
+</script>
+<style text="style/css">
+#control{
+	margin:10px;
+	padding:20px;
+
+	float:left;
+}
+#control p{
+	margin:0px;
+	padding:0px;
+}
+#myform{
+float:left;
+margin-top:35px;
+padding:20px;
+border-radius:12px;
+}
+#myAge {
+border:none;
+height:26px;
+border-radius:12px;
+}
+#myName {
+border:none;
+height:26px;
+border-radius:12px;
+}
+#myCountry {
+border:none;
+height:26px;
+border-radius:12px;
+}
+#myHobby {
+border:none;
+height:26px;
+border-radius:12px;
+}
+#myform tr{
+	height:40px;
+}
+</style>
+</head>
+<body>
+	<div id="control">	
+		<p>1. Please choose what you want to show in the right form.</p><br/>
+		<input type="checkbox" name="mycheck" value="Name" checked> Name<br/>
+		<input type="checkbox" name="mycheck" value="Age" checked> Age<br/>
+		<input type="checkbox" name="mycheck" value="Country" >Country<br/>
+		<input type="checkbox" name="mycheck" value="Hobby" >Hobby<br/><br/>
+		<p>2. Please choose your form style.</p><br/>
+		<select id="myStyle" >
+			<option value="pink">Romantic pink</option>
+			<option value="green">Fresh green</option>
+			<option value="gray">Business gray</option>
+		</select><br/><br/><br/>
+		<button id="btnShow" onclick="showForm()">Show my Form</button>
+	</div>
+	<table id="myform">
+	</table>
+
+</body>
+</html>

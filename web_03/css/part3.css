@@ -1,0 +1,66 @@
+
+#part3{
+ margin-top:20px;
+ background-color:#dde0e0;
+ height:100%;
+ float:left;
+ padding:10px;
+
+
+}
+#up{
+	height:50px;
+	width:800px;
+}
+#up a{
+	text-decoration:none;
+	margin-left:12px;
+	border: 1px solid #a5a5a5;
+	padding:5px;
+	float:left;
+	
+	background-color:#d0d0d0;
+
+}
+#down{
+	padding-top:10px;
+	padding-left:10px;
+	padding-right:10px;
+	float:left;
+	width:500px;
+	overflow:hidden;
+	
+	
+}
+#mydemos{
+	float:left;
+	width:560px;
+	margin-left:20px;
+}
+#page1{
+	padding-top:15px;
+
+}
+strong{
+	display:block;
+	margin-bottom:5px;
+}
+#part3 img{
+	margin-top:6px;
+	margin-bottom:6px;
+}
+#part3 p{
+	margin-top:10px;
+}
+iframe{
+	background:white;
+}
+#demo2{
+	margin-top:1300px;
+}
+#demo3{
+	margin-top:750px;
+}
+#demo4{
+	margin-top:80px;
+}

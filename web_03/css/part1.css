@@ -1,0 +1,220 @@
+body{
+	font-family:Garamond;
+	background: #eee url("../images/59.jpg") no-repeat right  top;
+}
+p{
+	margin:0px;
+	padding:0px;
+}
+#wapper{
+	width:800px;
+	height:1000px;
+	background:#eee;
+	overflow:hidden;
+	
+}
+#part1{
+	background: url("../images/bg1.jpg") no-repeat;
+	width:800px;
+	height:200px;
+	/* border: 5px solid transparent; */
+    /* border-image: linear-gradient(to top, lightblue, lightgray); */
+	overflow:hidden;
+	/* transform:translateZ(0); */
+	animation-name:changeBackground;
+	/* animation-delay:20s; */
+	animation-duration:11s;
+	animation-delay:19s;
+}
+#storyboard1{
+	font-size:14px;
+	position:absolute;
+	text-decoration:none;
+	font-weight:bold;
+	color:black;
+	opacity:0.7;
+	padding:6px;
+	background-color:white;
+}
+#txtjourney{
+	position:relative;
+	padding:5px 20px;
+	font-size:36px;
+	color:white;
+	position:absolute;
+	font-weight:bold;
+	left:1000px;
+	margin-top:20px;
+	top:5px;
+	opacity:0;
+	animation-name:changeTxt1;
+	animation-duration:10s;
+	animation-iteration-count:2;
+	/* animation-delay:20s */
+}
+#kiwi{
+	position:absolute;
+	animation-name:moveKiwi;
+	animation-delay:3s;
+	animation-duration:18s;
+	left:0px;
+	top:56px;
+	opacity:0;
+	/* animation-delay:20s */
+	
+}
+#spring{
+	position:absolute;
+	animation-name:moveSpring;
+	opacity:0;
+	animation-delay:21s;
+	animation-duration:9s;
+	top:-100px;
+	left:260px;
+}
+#txtwai{
+	font-size:36px;
+	color:#fb670e;
+	margin:0px;
+	padding:0px;
+	margin-top:12px;
+	padding:5px 20px;
+	font-family:Helvetica;
+	position:absolute;
+	top:5px;
+	left:300px;
+	opacity:0;
+	animation-name:movetxtWai;
+	animation-duration:6s;
+	animation-delay:24s;
+}
+#txtbest{
+	font-size:18px;
+	color:#fb670e;
+	background:#f3efec;
+	margin:0px;
+	padding:0px;
+	padding:2px 6px;
+	position:absolute;
+	top:70px;
+	left:0px;
+	opacity:0;
+	animation-name:movetxtbest;
+	animation-duration:3s;
+	animation-delay:27s;
+}
+#txtwait{
+	font-size:30px;
+	color:#0077a9;
+	position:absolute;
+	left:250px;
+	top:-50px;
+	opacity:0;
+	animation-name:movetxtwait;
+	animation-duration:5s;
+	animation-iteration-count:infinite;
+	animation-delay:30s;
+}
+#booking{
+	text-decoration:none;
+	font-size:18px;
+	color:#ff731d;
+	font-weight:bold;
+	position:absolute;
+	border-radius:10px;
+	box-shadow: 1px 1px 0px #888888;
+	border:1px solid #403f3e;
+	left:340px;
+	top:80px;
+	background:linear-gradient(to top, #d3eef9, white);
+	cursor:pointer;
+	opacity:0;
+	padding:5px 10px;
+	animation-name:movebooking;
+	animation-duration:3s;
+	animation-iteration-count:infinite;
+	animation-delay:34s;
+	
+}
+#studentid{
+	font-size:16px;
+	color:#8b8075;
+	background-color:#f3efec;
+	opacity:0.8;
+	position:absolute;
+	left:-50px;
+	top:150px;
+	padding:8px;
+	opacity:0;
+	animation-name:moveid;
+	animation-duration:4s;
+	animation-iteration-count:infinite;
+	animation-delay:36s;
+}
+#glass{
+	position:absolute;
+	top:96px;
+	left:360px;
+	opacity:0;
+	animation-name:moveglass;
+	animation-duration:5s;
+	animation-iteration-count:2;
+	animation-delay:32s;
+}
+
+@keyframes changeTxt1{
+	0%{left:560px; color:white;opacity:0;}
+	50%{left:130px; color:white;opacity:0.8;}
+	60%{left:130px; color:#ff731d;opacity:0.8; }
+	95%{left:50px; color:#ff731d;opacity:0; background-color:#f3f2f2;}
+	100%{left:-200px; color:#ff731d;opacity:0;}
+}
+@keyframes moveKiwi{
+	0%{left:0px; opacity:0.9;}
+	30%{left:300px; opacity:1;}
+	70%{left:600px; opacity:1;}
+	100%{left:700px; opacity:0;}
+}
+@keyframes changeBackground{
+	0%{background:url("../images/bg2.jpg") no-repeat;}
+	100%{background:url("../images/bg2.jpg") no-repeat;}
+}
+@keyframes moveSpring{
+	0%{top:0px;opacity:0.8}
+	25%{top:34px;opacity:1; }
+	100%{top:34px;opacity:1; }
+}
+@keyframes movetxtWai{
+	0%{top:-20px;opacity:0.7}
+	20%{top:12px;opacity:1; }
+	100%{top:12px;opacity:1;}
+}
+@keyframes movetxtbest{
+	0%{left:0px;opacity:0.7}
+	40%{left:270px;opacity:0.9; }
+	100%{left:270px;opacity:0.9;}
+}
+@keyframes movetxtwait{
+	0%{top:-20px;opacity:0.7}
+	20%{top:20px;opacity:1; }
+	60%{top:20px;opacity:1;font-size:32px; }
+	100%{top:20px;opacity:1;}
+}
+@keyframes movebooking{
+	0% {   transform: scale(1);opacity:1; }
+	50%{    transform: scale(1.1);opacity:1;}
+	100% {    transform: scale(1);opacity:1;}
+}
+@keyframes moveglass{
+	0%{top:110px;opacity:0.7}
+	20%{top:96px;opacity:1; }
+	50%{top:96px;opacity:1;}
+	60%{top:96px;opacity:1;transform:rotate(-5deg)}
+	80%{top:96px;opacity:1;transform:rotate(-0deg)}
+	100%{top:96px;opacity:0;}
+}
+@keyframes moveid{
+	0%{left:0px; opacity:0.9;}
+	50%{left:100px; opacity:0.9;}
+	0%{left:0px; opacity:0.9;}
+}

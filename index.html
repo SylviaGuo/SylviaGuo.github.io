@@ -1,20 +1,117 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8"/>
-<link href="css/main.css" rel="stylesheet" type="text/css"/>
-
-<title>Online booking system</title>	
+	<meta charset="utf-8"/>
+	<title>Sylvia's Webpage</title>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link href="css/main.css" rel="stylesheet" type="text/css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
-<div id="wrap">
-<div id="title"></div>
-<ul id="nav">
-	<li onClick="switchBackground(0)" class="lichoosed"><a href="html/cinema.html" target="iframe_a">Book Movie</a></li>
-	<li onClick="switchBackground(1)"><a href="documentation/Project documentation_Cinema room.pdf" target="iframe_a">Documentation Part</a></li>
-</ul>
-	<iframe src="html/cinema.html" name="iframe_a" frameborder="0" ></iframe>
-<script src="js/main.js"></script>
-</div>	
+	<div id="wapper">
+        <img id="img_title" src="images/title.png" />
+		<nav>
+			<ul id="navBar">
+                <li id="home" onclick="changSection(this)">Home</li>
+            <li id="about" onclick="changSection(this)">About</li>
+				<li class="last_li" id="contact" onclick="changSection(this)">Contact</li>
+			</ul>
+		</nav>
+		<section class="section" id="section_home">
+			<h1>Projects</h1>
+            <ul id="projects">
+                <li class="web">
+                    <a target="_blank" href="web_01/index.html">
+                        <p>Web project</p> 
+                        <p><b>Cinema booking system</b></p>
+                    </a>
+                </li>
+                 <li class="web">
+                    <a target="_blank" href="web_01/index.html">
+                        <p>Web project</p> 
+                        <p><b>Cinema booking system</b></p>
+                    </a>
+                </li>
+                <li class="web">
+                    <a target="_blank" href="web_03/index.html">
+                        <p>Web project</p> 
+                        <p><b>Advertisements</b></p>
+                    </a>
+                </li>
+                <li class="php">
+                    <a target="_blank" href="https://qualitybook.000webhostapp.com/index">
+                        <p>PHP Laravel project</p> 
+                        <p><b>Online book shop</b></p>
+                    </a>
+                </li>
+                <li target="_blank" class="dotnet">
+                    <a id="donet_a" href="#">
+                        <p id="donet_p1">ASP.Net project</p> 
+                        <p id="donet_p2"><b>Online book shop</b></p>
+                    </a>
+                </li>
+                <li class="csharp">
+                    <a target="_blank" href="https://drive.google.com/drive/folders/1vX4QzIZ5IQgWHM47VBrjS25-6HSPuKVW">
+                        <p>C# project</p> 
+                        <p><b>Solitaire game</b></p>
+                    </a>
+                </li>
+            </ul>
+		</section>
+        <section class="section" id="section_about">
+            <img>
+        </section>
+		<section class="section" id="section_contact">
+            <img src="images/plane.png">
+            <p>Email: sylviaguo31@gmail.com</p>
+            <p>Tel: 02108583663</p>
+        </section>
+        <footer>
+            <p>© 2020 by Sylvia Guo</p>
+        </footer>
+	</div>
+<script type="text/javascript">
+function changSection(current){
+    home = document.getElementById("home");
+    about = document.getElementById("about");
+    contact = document.getElementById("contact");
+    section_home = document.getElementById("section_home");
+    section_about = document.getElementById("section_about");
+    section_contact = document.getElementById("section_contact");
+    //Home
+    if (current.innerHTML == "Home"){
+        section_home.style.display="block";
+        section_about.style.display="none";
+        section_contact.style.display="none";
+    //About
+    }else if (current.innerHTML == "About"){
+        section_home.style.display="none";
+        section_about.style.display="block";
+        section_contact.style.display="none";
+    //Contact
+    }else{
+        section_home.style.display="none";
+        section_about.style.display="none";
+        section_contact.style.display="block";
+    }      
+    
+}
+    
+window.onload=function(){
+     //For ASP.Net project
+    donet_a = document.getElementById("donet_a");
+    donet_p1 = document.getElementById("donet_p1");
+    donet_p2 = document.getElementById("donet_p2");
+    donet_a.onmouseenter = function(){
+        donet_p1.innerHTML="";
+        donet_p2.innerHTML="Updating";
+    }
+    donet_a.onmouseleave = function(){
+        donet_p1.innerHTML="ASP.Net project";
+        donet_p2.innerHTML="Online book shop";
+    }  
+}
+    
+</script>
 </body>
 </html>

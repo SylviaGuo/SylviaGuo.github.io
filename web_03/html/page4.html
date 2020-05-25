@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Page 4</title>
+<script text="style/javascript">
+function student(name,id,email,birthday){//creat student function
+	this.name=name;
+	this.id=id;
+	this.email=email;
+	this.birthday=birthday;
+}
+//prepare 3 students
+var student1=new student("Sylvia",1,"sylvia@gmail.com","1991/03/31");
+var student2=new student("Lee",2,"lee@gmail.com","1955/05/11");
+var student3=new student("Yvonne",3,"yvonne@gmail.comn","1987/11/11");
+var students=[student1,student2,student3];
+
+function addStudent(){
+	name=document.getElementById("stName").value;
+	id=document.getElementById("stid").value;
+	email=document.getElementById("stemail").value;
+	birthday=document.getElementById("stbirth").value;
+	if(name!=null && id!=null && email!="" && birthday!=null){
+		add();
+	}
+	else{
+		alert("Please input all fields!");
+	}
+}
+function add(){//add student
+	name=document.getElementById("stName").value;
+	id=document.getElementById("stid").value;
+	email=document.getElementById("stemail").value;
+	birthday=document.getElementById("stbirth").value;
+	var st=new student(name,id,email,birthday);
+	students.push(st);
+}
+
+function showStudents(){
+	var displaytext="<br/><tr> <td colspan=\"4\"><b>Infromation of Students</b> Number="
+	+students.length+"</td></tr>"
+	for(var i=0; i<students.length;i++){
+		displaytext+="<tr><td> Name: "+
+		students[i].name+"</td><td> ID: "+students[i].id;
+		displaytext+=" </td><td>Email: "+students[i].email+
+		"</td><td> Birthday: "+students[i].birthday+"<br/></td><tr>";
+	}
+	document.getElementById('disp').innerHTML=displaytext;
+	
+}
+</script>
+<style text="style/css">
+
+#inputform{
+	background-color:#b5faa3;
+	padding:20px;
+	float:left;
+}
+button{
+	height:30px;
+	width:120px;
+	border-radius:12px;
+	background-color:#dee1dd;
+	color:#323232;
+	cursor:pointer;
+}
+#display{
+	float:left;
+	background-color:#dafcd1;
+	padding:20px;
+	float:left;
+	margin-left:20px;
+}
+</style>
+</head>
+<body>
+<div id="inputform">
+<table >
+	<thead>
+		<tr>
+			<td colspan="2" style="text-align:center;"> Student Information</td>	
+		</tr>
+	</thead>
+	<tbody>	
+		<tr>
+			<td style="text-align:right;"><label for="stName">Name:</label></td>
+			<td><input id="stName" type="text"></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;"><label for="stid">ID:</label></td>
+			<td><input id="stid" type="number"></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;"><label for="stemail">Email:</label></td>
+			<td><input type="email" id="stemail"></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;"><label for="stbirth">Birthday:</label></td>
+			<td><input type="date" id="stbirth"></td>
+		</tr>
+		<tr>
+			<td colspan="2" style="text-align:center;" onclick="addStudent()">
+			<button>Add student</button>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div id="display">
+	<button onclick="showStudents()">Show Students</button>
+	<table id="disp"></table>
+</div >
+
+</body>
+</html>

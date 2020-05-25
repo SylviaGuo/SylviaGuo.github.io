@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Page 3</title>
+<script text="style/javascript">
+function myChange(){//change background color
+		var myform=document.getElementById("myform");
+		var myText=document.getElementById("myText");
+		var showColor=document.getElementById("myColor").value;
+		myform.style.backgroundColor=showColor;
+		myText.style.color=getColor();
+}
+function getColor(){//get a random color 
+                          
+	var colorValue="0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f";
+	                         
+	var colorArray = colorValue.split(",");
+	var color="#";
+	for(var i=0;i<6;i++){
+	color+=colorArray[Math.floor(Math.random()*16)];
+	}
+	return color;
+}
+
+
+
+function changeStyle(){//change fontsize and line-height
+		var text=document.getElementById("myText");
+		var newSize=document.getElementById("fontRange").value;
+		var lineheightRange=document.getElementById("lineheightRange").value;
+		text.style.fontSize=newSize+"px"; 
+		text.style.lineHeight=lineheightRange+"px";
+}
+</script>
+<style text="style/css">
+#control{
+	margin:20px;
+	float:left;
+}
+#myform{
+	width:500px;
+	float:left;
+	margin:20px;
+	background-color:black;
+	color:white;
+	padding:20px;
+}
+#inControl{
+	border:1px solid black;
+	padding:20px;
+	float:left;
+}
+
+</style>
+</head>
+<body>
+	<div id="control">	
+		<label>Choose your color:</label>
+		<input type="color" name="color" id="myColor" onChange="myChange()"><br/><br/>
+		
+		<div id="inControl">
+			<label>Change font size:</label><br/><br/>
+			<input type="range" min="10" max="30" id="fontRange"><br/><br/>
+			<label>Choose your leading:</label><br/><br/>
+			<input type="range" min="12" max="50" id="lineheightRange"><br/><br/>
+			<button type="button" onclick="changeStyle()">Change Style</button>
+		</div>
+	</div>
+	<div id="myform">
+		<h2>Study your way</h2>
+		<p id="myText">At Unitec, you’ll get exposure to a real-world learning environment that combines industry-leading theory and hands-on practical experience that’ll equip you with all the skills you need to hit the ground running. Learn from industry-experienced lecturers and take your knowledge, skills and connections with you when you graduate.
+
+We offer a place for everyone and support a diverse whānau of people, where we get to know each and every one of our students by name. Because we care about your success, we can help you progress from entry to advanced-level programmes – from certificate-level all the way to an undergraduate degree.</p>
+		<img src="">
+	</div>
+
+
+</body>
+</html>

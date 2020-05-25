@@ -1,0 +1,143 @@
+#part2{
+	background:url("../images/contact_bg1.jpg") no-repeat;
+	font-family:Arial;
+}
+#part2{
+	width:350px;
+	height:300px;
+	position:absolute;
+	background-color:green;
+	margin-top:20px;
+
+}
+#storyboard2{
+	font-size:12px;
+	position:absolute;
+	text-decoration:none;
+	font-weight:bold;
+	color:black;
+	opacity:0.7;
+	padding:6px;
+	top:0px;
+	left:0px;
+	background-color:white;
+}
+#txt1{
+	font-size:32px;
+	color:white;
+	margin-top:40px;
+	margin-left:35px;
+}
+#imgLogo{
+	position:absolute;
+	left:70px;
+	top:170px;
+	z-index:9;
+	
+}
+.solid{
+	opacity:1;
+}
+.transparent{
+	opacity:0.2;
+}
+#discount{
+	position:absolute;
+	top:5px;
+	left:150px;
+	opacity:0;
+}
+#btnlink{
+	position:absolute;
+	
+	width:236px;
+	height:52px;
+	cursor:pointer;
+	display:block;
+}
+#btnsign{
+	text-align:center;
+	line-height:52px;
+	text-decoration:none;
+	position:absolute;
+	font-size:20px;
+	font-weight:bold;
+	border-radius:28px;
+	width:236px;
+	height:52px;
+	color:#ec695c;
+	border:none;
+	background-color:white;
+	box-shadow: 2px 6px 5px #672723;
+	cursor:pointer;
+	top:210px;
+	left:60px;
+	opacity:0;
+	z-index:99;
+	
+}
+#txtTs{
+	position:absolute;
+	left:140px;
+	top:270px;
+	color:white;
+	font-size:14px;
+	opacity:0;
+}
+#cover{
+	position:absolute;
+	/* left:460px; */
+	left:420px;
+	top:-150px;
+	opacity:0;
+}
+#txtengery{
+	position:absolute;
+	top:40px;
+	left:40px;
+	font-size:32px;
+	color:#fb4a3b;
+	opacity:0;
+}
+#imglogocolor{
+	position:absolute;
+	left:70px;
+	top:150px;
+	opacity:0;
+}
+#txtonline{
+	position:absolute;
+	top:260px;
+	left:60px;
+	font-size:14px;
+	color:#fb4a3b;
+	opacity:0;
+}
+#replay{
+	position:absolute;
+	width:80px;
+	height:80px;
+	color:white;
+	background-color:#983e74;
+	font-size:18px;
+	box-shadow: 2px 6px 5px #672723;
+	border-radius:50px;
+	margin-left:125px;
+	border:none;
+	padding:0px;
+	z-index:10;
+	cursor:pointer;
+	opacity:0;
+}
+#studentId{
+	position:absolute;
+	top:252px;
+	left:0px;
+	color:#530032;
+	font-size:16px;
+	padding-left:10px;
+	opacity:0;
+	background:white;
+	padding:5px 6px;
+}
+

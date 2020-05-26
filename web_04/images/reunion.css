@@ -1,0 +1,39 @@
+html,body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,label,textarea,p,blockquote,th,td {margin:0;padding:0;}
+body {background-color:#fff;}
+body,textarea {font:400 12px/1.5em Microsoft Yahei,Simsun,Arial;color:#666;}
+a,a:visited {text-decoration:none;color:#666;cursor:pointer;}
+a:hover {text-decoration:underline;color:#df173c;}
+em,i {font-style:normal;}
+h1,h2,h3,h4,h5,h6,strong {font-weight:700;font-size:100%;}
+label, input, select {vertical-align:middle;}
+img, button {background:none;border:0 none;vertical-align:middle;}
+ol,ul {list-style:none;}
+table,th,td,fieldset,legend {font-weight:400;border:0 none;border-collapse:collapse}
+.fl{ float:left;}
+.fr{ float:right;}
+body a{outline:none;blr:expression(this.onFocus=this.blur());}
+.clear {zoom:1;}
+.clear:after {content:".";display:block;clear:both;height:0;visibility:hidden;}
+
+.wrap{ width:960px; margin:0 auto; overflow:hidden;}
+.img01{ height:185px; background:url(ban1.jpg) no-repeat;z-index:1;}
+.img02{ height:400px; background:url(ban2.jpg) no-repeat; z-index:1;}
+.wrapbox{width:960px;background: url(bgs.jpg) center 0 repeat-y; padding-bottom: 40px}
+.wrapinner{width:844px;background: url(inner_bgs.jpg) repeat-y;margin: 0 auto;}
+.sm-box{width: 650px;line-height: 32px;font-size: 18px;color: #000;margin: 0 auto;padding-top: 10px}
+.mcbox{ width: 790px;background: url(titbg.png) left top no-repeat; margin:40px auto 0;overflow: hidden;}
+.mctit{height: 40px;margin: 40px 0 0 130px;}
+.p-sm{margin: 60px 0 0 190px;font-size: 18px;color: #333;line-height: 30px;}
+.lbgtit{background: url(tit_lbg.jpg) left no-repeat;padding-left: 30px;}
+.rbgtit{background: url(tit_rbg.jpg) right no-repeat;padding-right: 30px;text-align: right;}
+.mccon{width: 650px;margin: 20px auto;padding-bottom: 20px;}
+.mccon p{ line-height:30px; font-size:18px; color:#666;}
+.mccon ul{ width:680px; margin-top:30px;}
+.mccon li{ float:left; width:160px; display:inline; margin:10px 20px 30px 20px;background: #f5f0f2;padding: 10px;}
+.mccon li img{ width:160px; height:160px; margin-bottom:5px;}
+.mccon li a:hover{ text-decoration:none;}
+.mccon li p{ background:url(plbtn.png) left center no-repeat; padding-left:38px;font-size: 14px;line-height: 20px;}
+.mccon li a p{ color:#4a4747;}
+.mccon li p span{ display:block; width:115px; height:20px; overflow:hidden; white-space:nowap; text-overflow:ellipsis;}
+
+

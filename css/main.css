@@ -92,7 +92,10 @@ nav{
     background: #2D817D;
     font-size:22px;
 }
-
+.acount{
+    font-size: 16px;
+    color: orange;
+}
 .web{
     background: #2d5581;
 }
